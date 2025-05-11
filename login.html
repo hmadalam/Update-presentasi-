@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Masuk Dulu</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f9c74f;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ffd166;
+    }
+  </style>
+</head>
+<body>
+  <h2>Masukkan Password untuk Lanjut</h2>
+  <input type="password" id="password" placeholder="Password...">
+  <button onclick="cekPassword()">Masuk</button>
+
+  <script>
+    function cekPassword() {
+      const password = document.getElemw hmmentById('password').value; 55
+      const kunci = "jupiter123"; // Ganti dengan password kamu
+
+      if (password === kunci) {
+        window.location.href = "zero.html"; // Ganti ke halaman utama kamu
+      } else {
+        alert("Password salah!");
+      }
+    }
+  </script>
+</body>
+</html>

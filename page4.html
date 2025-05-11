@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabel Data Planet Jupiter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column; /* Agar header dan konten berada dalam satu kolom */
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      width: 100%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      position: absolute; /* Agar header tetap berada di atas konten */
+      top: 0;
+      display: flex;
+      justify-content: center; /* Agar judul berada di tengah */
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #f9c74f;
+      margin: 0;
+      text-shadow: 0 0 10px #f9c74f;
+    }
+
+    .content {
+      margin-top: 80px; /* Menurunkan sedikit untuk desktop */
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 80%;
+      max-width: 1200px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #00d4ff;
+      color: black;
+    }
+
+    td {
+      background-color: #333;
+      color: #a0c4ff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f9c74f;
+      color: black;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ffd166;
+      box-shadow: 0 0 15px #f9c74f;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mengubah margin-top header untuk desktop */
+    @media (min-width: 1024px) {
+      .content {
+        margin-top: 50px; /* Mendekatkan konten ke judul */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tabel Data Planet Jupiter</h1>
+  </header>
+
+  <section class="content">
+    <table>
+      <tr>
+        <th>Fitur</th>
+        <th>Data</th>
+      </tr>
+      <tr>
+        <td>Massa</td>
+        <td>321 kali massa Bumi</td>
+      </tr>
+      <tr>
+        <td>Satelit</td>
+        <td>79 satelit dan 4 cincin</td>
+      </tr>
+      <tr>
+        <td>Diameter</td>
+        <td>142.984 km</td>
+      </tr>
+      <tr>
+        <td>Kandungan Penyusun Atmosfer</td>
+        <td>Hidrogen, Helium, Metana, Amonia, dan uap air</td>
+      </tr>
+      <tr>
+        <td>Gravitasi</td>
+        <td>2,525 kali gravitasi Bumi</td>
+      </tr>
+      <tr>
+        <td>Periode Rotasi</td>
+        <td>9 jam 55 menit</td>
+      </tr>
+      <tr>
+        <td>Jarak dari Matahari</td>
+        <td>5,2 SA</td>
+      </tr>
+      <tr>
+        <td>Periode Revolusi</td>
+        <td>11,8 tahun</td>
+      </tr>
+    </table>
+
+    <a href="tata Surya.html" class="btn">Lanjut</a>
+  </section>
+</body>
+</html>

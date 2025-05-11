@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Foto dan Video Planet Jupiter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header {
+      padding: 20px;
+      background-color: #111;
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+      animation: fadeInDown 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #f9c74f;
+    }
+
+    .content {
+      padding: 20px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    h2 {
+      color: #f9c74f;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 90%; /* Ukuran gambar lebih besar */
+      margin: 15px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      display: block; /* Membuat gambar tampil di tengah */
+      opacity: 0;
+      animation: fadeInImage 2s forwards;
+    }
+
+    iframe {
+      margin-top: 20px;
+      max-width: 90%; /* Ukuran video diatur agar tidak terlalu besar */
+      height: 315px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      opacity: 0;
+      animation: fadeInImage 2s forwards;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #f9c74f;
+      color: black;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      opacity: 0;
+      animation: fadeInButton 2s forwards;
+    }
+
+    .btn:hover {
+      background-color: #ffd166;
+      box-shadow: 0 0 15px #f9c74f;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInImage {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInButton {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsif untuk layar lebih besar (desktop) */
+    @media (min-width: 768px) {
+      .content {
+        padding: 40px 100px;
+      }
+    }
+    
+    iframe {
+  width: 100%;  /* Atur lebar iframe menjadi 100% dari elemen induknya */
+  max-width: 800px;  /* Atur lebar maksimal iframe */
+  height: 450px;  /* Atur tinggi iframe */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Foto dan Video Planet Jupiter</h1>
+  </header>
+
+  <section class="content">
+    <h2>Foto Planet Jupiter</h2>
+    <img src="/planet Jupiter /2b32efd1163d2789cfe8803a0a23629a.jpg" alt="Jupiter 1">
+    <img src="/planet Jupiter /5fc73dbc85e18d7164f51e6d408548cd.jpg" alt="Jupiter 2">
+    <img src="/ca017d0d-5a39-44c7-b871-93f4955d379f_removalai_preview.png" alt="Jupiter 3">
+
+    <h2>Video Planet Jupiter</h2>
+    <iframe src="https://www.youtube.com/embed/3afEX8a2jPg" 
+      title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+    <a href="soal.html" class="btn">Lanjut/a>
+  </section>
+</body>
+</html>

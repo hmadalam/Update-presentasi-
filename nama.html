@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALAM | Portofolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: #232426;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      color: #ff2c6d;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .header p {
+      font-size: 20px;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      background: rgba(18, 18, 18, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .about p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .about img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 6px solid #ff2c6d;
+      object-fit: cover;
+      margin: 0 auto;
+      display: block;
+      animation: fadeInUp 1.5s ease-out forwards;
+      transition: transform 0.3s ease;
+    }
+
+    .about img:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .skill {
+  background: rgba(18, 18, 18, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  margin-bottom: 20px;
+}
+
+.skill h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.skill p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 36px;
+      }
+
+      .header p {
+        font-size: 18px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
+
+      .about p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <h1>ALAM</h1>
+      <p>Web Developer | Game Developer | Tech Enthusiast</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="section about">
+      <h2>About Me</h2>
+      <img src="/49526b064f202754ca36df381b1f828d.jpg" alt="Foto Alam">
+      <p>
+        Hai, saya Alam, seorang pelajar yang sangat antusias dengan teknologi dan pemrograman. Saya memiliki minat besar di bidang pengembangan web dan game. Saya suka tantangan, belajar hal baru, dan selalu berusaha menciptakan sesuatu yang berguna.
+      </p>
+    </div>
+
+    <!-- Skills Section -->
+<div class="skill">
+  <h3>Skill</h3>
+  <p style="color:#aaa; font-style:italic;">Masih kosong... tapi akan segera terisi.</p>
+  <p style="color:#333;">-</p>
+</div>
+  </div>
+</body>
+</html>

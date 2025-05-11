@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soal Kejutan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #0b0c1a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      text-align: center;
+      overflow-y: auto;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      color: #f9c74f;
+      text-shadow: 0 0 10px #f9c74f;
+      font-size: 4rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 25px;
+    }
+
+    .btn {
+      background-color: #f9c74f;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      font-size: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #f9c74f;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.2);
+    }
+
+    .soal, .jawaban {
+      margin-top: 40px;
+      font-size: 24px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 80%;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.5s ease;
+    }
+
+    .soal.show, .jawaban.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .btn-jawab {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00bcd4;
+      transition: background-color 0.3s;
+    }
+
+    .btn-jawab:hover {
+      background-color: #00acc1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pilih Nomor untuk Soal Kejutan!</h1>
+  <div class="grid">
+    <button class="btn" onclick="tampilkanSoal(1)">1</button>
+    <button class="btn" onclick="tampilkanSoal(2)">2</button>
+    <button class="btn" onclick="tampilkanSoal(3)">3</button>
+    <button class="btn" onclick="tampilkanSoal(4)">4</button>
+    <button class="btn" onclick="tampilkanSoal(5)">5</button>
+    <button class="btn" onclick="tampilkanSoal(6)">6</button>
+    <button class="btn" onclick="tampilkanSoal(7)">7</button>
+    <button class="btn" onclick="tampilkanSoal(8)">8</button>
+    <button class="btn" onclick="tampilkanSoal(9)">9</button>
+  </div>
+
+  <div class="soal" id="soalBox">Soalnya akan muncul di sini...</div>
+  <button id="jawabBtn" class="btn-jawab" style="display: none;" onclick="tampilkanJawaban()">Lihat Jawaban</button>
+  <div class="jawaban" id="jawabanBox"></div>
+  <button id="lanjutBtn" class="btn-jawab" style="display: none;" onclick="lanjutKeHalaman()">Lanjut</button>
+
+  <script>
+    const soalList = {
+      1: "Apa planet terbesar di Tata Surya?",
+      2: "Berapa jumlah satelit Jupiter yang sudah diketahui?",
+      3: "Apa nama bintik merah besar di Jupiter?",
+      4: "Apa gas utama yang menyusun atmosfer Jupiter?",
+      5: "Apa nama pesawat luar angkasa yang mengorbit Jupiter?",
+      6: "Jupiter termasuk dalam planet jenis apa?",
+      7: "Apakah Jupiter memiliki cincin?",
+      8: "Sebutkan 1 satelit terbesar Jupiter!",
+      9: "Berapa lama Jupiter mengelilingi Matahari?"
+    };
+
+    const jawabanList = {
+      1: "Jupiter.",
+      2: "Lebih dari 90 satelit.",
+      3: "Great Red Spot (Bintik Merah Besar).",
+      4: "Gas Hidrogen dan Helium.",
+      5: "Juno.",
+      6: "Planet gas raksasa (gas giant).",
+      7: "Ya, meskipun tipis dan tidak sejelas Saturnus.",
+      8: "Ganymede.",
+      9: "Sekitar 12 tahun Bumi."
+    };
+
+    let soalAktif = null;
+
+    function tampilkanSoal(nomor) {
+  soalAktif = nomor;
+  const box = document.getElementById('soalBox');
+  const jawabBtn = document.getElementById('jawabBtn');
+  const jawabanBox = document.getElementById('jawabanBox');
+  const lanjutBtn = document.getElementById('lanjutBtn');
+  
+  box.classList.remove('show');
+  jawabanBox.classList.remove('show');
+  jawabanBox.textContent = '';
+  
+  // Tombol 'Lanjut' ditampilkan langsung
+  lanjutBtn.style.display = 'inline-block';
+  
+  // Tombol 'Lihat Jawaban' tetap ditampilkan juga
+  jawabBtn.style.display = 'inline-block';
+  
+  setTimeout(() => {
+    box.textContent = soalList[nomor];
+    box.classList.add('show');
+  }, 200);
+}
+    function tampilkanJawaban() {
+      const jawabanBox = document.getElementById('jawabanBox');
+      const lanjutBtn = document.getElementById('lanjutBtn');
+      jawabanBox.textContent = jawabanList[soalAktif];
+      jawabanBox.classList.add('show');
+      lanjutBtn.style.display = 'inline-block';
+    }
+
+    function lanjutKeHalaman() {
+      window.location.href = 'kesimpulan.html'; // Ganti dengan halaman tujuan
+    }
+  </script>
+</body>
+</html>

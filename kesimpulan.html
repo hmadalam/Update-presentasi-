@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kesimpulan Presentasi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #0b0c10;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #f9c74f;
+      margin: 0;
+      text-shadow: 0 0 10px #f9c74f;
+    }
+
+    .kesimpulan {
+      background-color: rgba(255, 255, 255, 0.05);
+      width: 80%;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 1.5s ease-in-out;
+      flex-grow: 1;
+    }
+
+    .kesimpulan p {
+      font-size: 18px;
+      color: #a0c4ff;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .kesimpulan img {
+      max-width: 100%;
+      margin-top: 20px;
+      border-radius: 12px;
+      border: 2px solid #f9c74f;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #f9c74f;
+      color: black;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ffd166;
+      box-shadow: 0 0 15px #f9c74f;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .kesimpulan {
+        width: 90%;
+        padding: 15px;
+      }
+
+      .kesimpulan p {
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .kesimpulan p {
+        font-size: 15px;
+      }
+
+      .btn {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kesimpulan Presentasi</h1>
+  </header>
+
+  <section class="kesimpulan">
+    <p>
+      Planet Jupiter adalah planet terbesar di tata surya. Jupiter memiliki atmosfer gas raksasa yang didominasi oleh hidrogen dan helium, serta dilengkapi dengan cincin tipis dan banyak satelit.
+    </p>
+    <p>
+      Dari data yang telah disampaikan, kita mengetahui bahwa Jupiter memiliki peran besar dalam menjaga kestabilan tata surya melalui gravitasinya yang kuat.
+    </p>
+    <p>
+      Semoga presentasi ini dapat menambah wawasan dan ketertarikan kita untuk terus belajar tentang luar angkasa.
+    </p>
+    <img src="/ca017d0d-5a39-44c7-b871-93f4955d379f_removalai_preview.png" alt="Jupiter dan satelitnya">
+    
+    <br>
+    <a href="page8.html" class="btn">Lanjut</a>
+  </section>
+</body>
+</html>

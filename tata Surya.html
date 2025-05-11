@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tata Surya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #000010, #000);
+      font-family: 'Quicksand', sans-serif;
+      color: white;
+      text-align: center;
+      overflow-y: auto; /* Mengaktifkan scroll pada sumbu Y */
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 5vw;
+      color: #f9c74f;
+      margin: 20px;
+      text-shadow: 0 0 10px #f9c74f, 0 0 20px #f9c74f;
+    }
+
+    .solar-system {
+      position: relative;
+      width: 100vw;
+      height: 80vh;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, #ffd700, #ff8c00);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 30px #ffd700, 0 0 70px #ff8c00;
+      z-index: 2;
+    }
+
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px dashed #FFFFFF;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .planet {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    .planet-name {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+      white-space: nowrap;
+    }
+
+    /* Orbit Animations */
+    .orbit:nth-child(2) { width: 100px; height: 100px; animation: orbit 5s linear infinite; }
+    .orbit:nth-child(3) { width: 150px; height: 150px; animation: orbit 8s linear infinite; }
+    .orbit:nth-child(4) { width: 200px; height: 200px; animation: orbit 11s linear infinite; }
+    .orbit:nth-child(5) { width: 250px; height: 250px; animation: orbit 14s linear infinite; }
+    .orbit:nth-child(6) { width: 300px; height: 300px; animation: orbit 17s linear infinite; }
+    .orbit:nth-child(7) { width: 350px; height: 350px; animation: orbit 20s linear infinite; }
+    .orbit:nth-child(8) { width: 400px; height: 400px; animation: orbit 23s linear infinite; }
+    .orbit:nth-child(9) { width: 450px; height: 450px; animation: orbit 26s linear infinite; }
+
+    .orbit .planet { width: 10px; height: 10px; background: #aaa; }
+    .orbit:nth-child(2) .planet { background: #c2c2c2; }     /* Merkurius */
+    .orbit:nth-child(3) .planet { background: #deb887; }     /* Venus */
+    .orbit:nth-child(4) .planet { background: #00aaff; }     /* Bumi */
+    .orbit:nth-child(5) .planet { background: #ff5e00; }     /* Mars */
+    .orbit:nth-child(6) .planet { background: #f4c542; }     /* Jupiter */
+    .orbit:nth-child(7) .planet { background: #ffcc80; }     /* Saturnus */
+    .orbit:nth-child(8) .planet { background: #33ffff; }     /* Uranus */
+    .orbit:nth-child(9) .planet { background: #3399ff; }     /* Neptunus */
+
+    @keyframes orbit {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Tombol Lanjut */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
+      background-color: #f9c74f;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #f9c74f;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: #ffd166;
+      box-shadow: 0 0 20px #f9c74f, 0 0 30px #f9c74f;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Tata Surya</h1>
+  <div class="solar-system">
+    <div class="sun"></div>
+
+    <!-- Orbit dan Planet -->
+    <div class="orbit">
+      <div class="planet"><div class="planet-name">Merkurius</div></div>
+    </div>
+    <div class="orbit">
+      <div class="planet"><div class="planet-name">Venus</div></div>
+    </div>
+    <div class="orbit">
+      <div class="planet"><div class="planet-name">Bumi</div></div>
+    </div>
+    <div class="orbit">
+      <div class="planet"><div class="planet-name">Mars</div></div>
+    </div>
+    <div class="orbit">
+      <div class="planet"><div class="planet-name">Jupiter</div></div>
+    </div>
+    <div class="orbit">
+      <div class="planet"><div class="planet-name">Saturnus</div></div>
+    </div>
+    <div class="orbit">
+      <div class="planet"><div class="planet-name">Uranus</div></div>
+    </div>
+    <div class="orbit">
+      <div class="planet"><div class="planet-name">Neptunus</div></div>
+    </div>
+  </div>
+
+  <!-- Tombol Lanjut -->
+  <a href="page5.html" class="btn">Lanjut</a>
+</body>
+</html>
